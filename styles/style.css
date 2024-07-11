@@ -1,0 +1,71 @@
+HTML, body {
+    font-size: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+}
+
+.raleway-thin {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.page-title {
+    font-size: 8em;
+    font-style: italic;
+    margin: 0px;
+}
+
+.title-bottom {
+    margin-top: -6%;
+    margin-left: 20%;
+}
+
+.main-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info-section {
+    width: 62%;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slides {
+    width: 38%;
+    position: relative;
+    background-image: url(../images/rainforest.jpg);
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.navbar button {
+    font-family: 'Courier New', Courier, monospace;
+    border: 0px;
+    background-color: white;
+    color: gray;
+    font-size: 1.5em;
+}
+
+.general-text {
+    font-family: 'Courier New', Courier, monospace;
+}

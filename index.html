@@ -1,17 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>almbkn</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Azaan Lambkin</title>
   </head>
   <body>
-    <main>
-        <h1>Azaan Lambkin</h1>  
-    </main>
-	<script src="index.js"></script>
+    <div class="main-div">
+      <div class="info-section">
+        <div class="header">
+          <p class="page-title title-top raleway-thin">AZAAN</p>
+          <p class="page-title title-bottom raleway-thin ">LAMBKIN</p>
+          <div class="navbar">
+            <button type="button" id="about-button">ABOUT</button>
+            <button type="button" id="resume-button">RESUME</button>
+            <button type="button" id="projects-button">PROJECTS</button>
+            <button type="button" id="contact-button">CONTACT</button>
+          </div>
+        </div>
+        <div id="main-content">
+          <p class="general-text">Loren ipsum dolor shit amet.</p>
+        </div>
+        <template id="about-content">
+          <p class="general-text">Hi! I'm Azaan, a recent Computer Science graduate from the <span class="bold">University of Michigan</span> with an interest in game development on both the technical and artistic sides.</p>
+        </template>
+        <template id="resume-content">
+          <p class="general-text">Resume</p>
+        </template>
+        <template id="projects-content">
+          <p class="general-text">Projects</p>
+        </template>
+        <template id="contact-content">
+          <p class="general-text">Contact</p>
+        </template>
+      </div>
+      <div class="slides">
+      </div>
+    </div>
+  <script src="scripts/main.js"></script>
   </body>
 </html>
+
