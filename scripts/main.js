@@ -25,8 +25,10 @@ document.addEventListener("click", function(event) {
         mainContent.appendChild(about.content.cloneNode(true));
     }
     if (event.target.matches("#resume-button")) {
-        mainContent.innerHTML = "";
-        mainContent.appendChild(resume.content.cloneNode(true));
+        window.open(
+            "https://almbkn.github.io/resources/ALambkin_Resume24.pdf",
+            "_blank"
+        );
     }
     if (event.target.matches("#projects-button")) {
         mainContent.innerHTML = "";
