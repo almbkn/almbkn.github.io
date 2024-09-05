@@ -6,40 +6,32 @@
     <link href="styles/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Azaan Lambkin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>almbkn</title>
   </head>
   <body>
-    <div class="main-div">
-      <div class="info-section">
-        <div class="header">
-          <p class="page-title title-top raleway-thin">AZAAN</p>
-          <p class="page-title title-bottom raleway-thin ">LAMBKIN</p>
-          <div class="navbar">
-            <button type="button" id="about-button">ABOUT</button>
-            <button type="button" id="resume-button">RESUME</button>
-            <button type="button" id="projects-button">PROJECTS</button>
-            <button type="button" id="contact-button">CONTACT</button>
-          </div>
+    <div id="outer-div">
+      <div id="page-header">
+        <h1 id="page-title" class="rokkitt">ALMBKN</h1><span class="dot"></span>
+        
+      </div>
+      <div id="section-header">
+        <h2 id="section-title" class="rokkitt">ABOUT</h1>
+      </div>
+      <div id="content">
+        <div id="navigation">
+          <button id="about" class="selected">ABOUT</button>
+          <button id="resume">RESUME</button>
+          <button id="games">GAMES</button>
+          <button id="portfolio">PORTFOLIO</button>
+          <button id="contact">CONTACT</button>
         </div>
+        <div class="vertical-line"></div>
         <div id="main-content">
-          <p class="general-text">Loren ipsum dolor shit amet.</p>
+          Yo!
         </div>
-        <template id="about-content">
-          <p class="general-text">Hi! I'm Azaan, a recent Computer Science graduate from the <span class="bold">University of Michigan</span> with an interest in game development on both the technical and artistic sides.</p>
-        </template>
-        <template id="resume-content">
-          <p class="general-text">Resume</p>
-        </template>
-        <template id="projects-content">
-          <p class="general-text">Projects</p>
-        </template>
-        <template id="contact-content">
-          <p class="general-text">Contact</p>
-        </template>
       </div>
-      <div class="slides">
-      </div>
+      
     </div>
   <script src="scripts/main.js"></script>
   </body>
