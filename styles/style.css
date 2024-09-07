@@ -5,6 +5,7 @@ HTML, body {
     border: 0px;
     height: 100%;
 }
+
 #outer-div {
     width: 100%;
     height: 100%;
@@ -22,60 +23,100 @@ h2.rokkitt {
     font-family: "Rokkitt", serif;
     font-optical-sizing: auto;
     font-weight: 600;
-    font-size: 50px;
+    font-size: 4rem;
+    margin-top: 0.5rem;
+    font-style: normal;
+}
+
+h3.rokkitt {
+    margin: 0rem;
+    font-family: "Rokkitt", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 2rem;
     font-style: normal;
 }
 
 #page-title {
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 2rem;
+    margin-left: 2rem;
     display: inline-block;
 }
 
-#section-title {
-    margin-left: 200px;
+.section-title {
     display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .dot {
-    height: 8px;
-    width: 8px;
+    height: 0.5rem;
+    width: 0.5rem;
     background-color: black;
     border-radius: 50%;
     display: inline-block;
 }
 
-#navigation {
-    width: 10%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
-}
-
-#navigation button {
-    background-color: white;
-    color: gray;
-    text-align: right;
-    border: none;
-    font-size: large;
-}
-
 #content {
     width: 100%;
-    margin-top: 20px;
     display: flex;
     flex-direction: row;
 }
 
-.vertical-line {
-    border-left: solid gray;
-    width: 10%;
-    margin-left: 10px;
-    
+#navigation {
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 10rem;
+    row-gap: 0.2rem;
+    align-self: flex-start;
+}
+
+#navigation button {
+    padding-top: 0.4rem;
+    background-color: white;
+    color: black;
+    text-align: right;
+    border: none;
+    font-weight: thin;
+    font-size: large;
+}
+
+#navigation button:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+#navigation button.selected {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 #main-content {
-    margin-left: 50px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 4rem;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+.vertical-line {
+    margin-top: 7rem;
+    border-left: thin solid black;
+    width: 0.2rem;
+    margin-left: 1rem;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.bold {
+    font-weight: bold;
 }

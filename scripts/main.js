@@ -1,42 +1,82 @@
-var mainContent;
-var about;
+var welcome;
+var welcomeBody;
+var games;
+var gamesBody;
+var portfolio;
+var portfolioBody;
 var resume;
-var projects;
+var resumeBody;
 var contact;
+var contactBody;
 var loaded = false;
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    mainContent = document.querySelector("#main-content");
-    about = document.querySelector("#about-content");
-    resume = document.querySelector("#resume-content");
-    projects = document.querySelector("#projects-content");
-    contact = document.querySelector("#contact-content");
-    buttons = document.querySelectorAll(".navbar button");
-    console.log(buttons);
+    buttons = document.querySelectorAll("#navigation button");
+    welcome = document.querySelector("#welcome");
+    welcomeBody = document.querySelector("#welcome-content")
+    games = document.querySelector("#games");
+    gamesBody = document.querySelector("#games-content");
+    portfolio = document.querySelector("#portfolio");
+    portfolioBody = document.querySelector("#portfolio-content")
+    resume = document.querySelector("#resume");
+    resumeBody = document.querySelector("#resume-content")
+    contact = document.querySelector("#contact");
+    contactBody = document.querySelector("#contact-content")
     loaded = true;
+    
 });
 
 document.addEventListener("click", function(event) {
     if (!loaded) {
         return;
     }
-    if (event.target.matches("#about-button")) {
-        mainContent.innerHTML = "";
-        mainContent.appendChild(about.content.cloneNode(true));
+    if (event.target.matches("#welcome-button")) {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+    if (event.target.matches("#games-button")) {
+        document.querySelector("#games").scrollIntoView({behavior: 'smooth'});
+    }
+    if (event.target.matches("#portfolio-button")) {
+        document.querySelector("#portfolio").scrollIntoView({behavior: 'smooth'});
     }
     if (event.target.matches("#resume-button")) {
-        window.open(
-            "https://almbkn.github.io/resources/ALambkin_Resume24.pdf",
-            "_blank"
-        );
-    }
-    if (event.target.matches("#projects-button")) {
-        mainContent.innerHTML = "";
-        mainContent.appendChild(projects.content.cloneNode(true));
+        document.querySelector("#resume").scrollIntoView({behavior: 'smooth'});
     }
     if (event.target.matches("#contact-button")) {
-        mainContent.innerHTML = "";
-        mainContent.appendChild(contact.content.cloneNode(true));
+        document.querySelector("#contact").scrollIntoView({behavior: 'smooth'});
     }
 });
+
+document.addEventListener("scroll", function(event) {
+    updateNavigation();
+});
+
+function updateNavigation() {
+    for (button of buttons) {
+        button.classList.remove("selected");
+    }
+    if (isVisible(welcome) || isVisible(welcomeBody)) {
+        document.querySelector("#welcome-button").classList.add("selected");
+    }
+    else if (isVisible(games) || isVisible(gamesBody)) {
+        document.querySelector("#games-button").classList.add("selected");
+    }
+    else if (isVisible(portfolio) || isVisible(portfolioBody)) {
+        document.querySelector("#portfolio-button").classList.add("selected");
+    }
+    else if (isVisible(resume) || isVisible(resumeBody)) {
+        document.querySelector("#resume-button").classList.add("selected");
+    }
+    else {
+        document.querySelector("#contact-button").classList.add("selected");
+    }
+}
+
+function isVisible(e) {
+    const elementTop = element.offsetTop; 
+    const elementBottom = elementTop + element.offsetHeight; 
+    const viewportTop = window.scrollY;
+    const viewportBottom = viewportTop + window.innerHeight; 
+    return (elementBottom > viewportTop && elementTop < viewportBottom);
+}
 
