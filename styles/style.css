@@ -88,10 +88,10 @@ h3.rokkitt {
     text-decoration-thickness: 2px;
 }
 
-#navigation button.selected {
+/* #navigation button.selected {
     text-decoration: underline;
     text-decoration-thickness: 2px;
-}
+} */
 
 #main-content {
     margin-top: 1rem;
@@ -101,6 +101,21 @@ h3.rokkitt {
 
 img {
     max-width: 80%;
+    height: auto;
+}
+
+.comic-page {
+    max-width: 40%;
+    height: auto;
+}
+
+.small {
+    max-width: 60%;
+    height: auto;
+}
+
+.portrait {
+    max-width: 30%;
     height: auto;
 }
 

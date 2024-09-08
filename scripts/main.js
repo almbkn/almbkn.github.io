@@ -47,36 +47,3 @@ document.addEventListener("click", function(event) {
     }
 });
 
-document.addEventListener("scroll", function(event) {
-    updateNavigation();
-});
-
-function updateNavigation() {
-    for (button of buttons) {
-        button.classList.remove("selected");
-    }
-    if (isVisible(welcome) || isVisible(welcomeBody)) {
-        document.querySelector("#welcome-button").classList.add("selected");
-    }
-    else if (isVisible(games) || isVisible(gamesBody)) {
-        document.querySelector("#games-button").classList.add("selected");
-    }
-    else if (isVisible(portfolio) || isVisible(portfolioBody)) {
-        document.querySelector("#portfolio-button").classList.add("selected");
-    }
-    else if (isVisible(resume) || isVisible(resumeBody)) {
-        document.querySelector("#resume-button").classList.add("selected");
-    }
-    else {
-        document.querySelector("#contact-button").classList.add("selected");
-    }
-}
-
-function isVisible(e) {
-    const elementTop = element.offsetTop; 
-    const elementBottom = elementTop + element.offsetHeight; 
-    const viewportTop = window.scrollY;
-    const viewportBottom = viewportTop + window.innerHeight; 
-    return (elementBottom > viewportTop && elementTop < viewportBottom);
-}
-
