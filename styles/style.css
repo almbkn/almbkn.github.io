@@ -119,6 +119,10 @@ img {
     height: auto;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .vertical-line {
     margin-top: 7rem;
     border-left: thin solid black;
@@ -135,3 +139,22 @@ p {
 .bold {
     font-weight: bold;
 }
+
+a {
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+.spacer {
+    height: 1rem;
+}
+/* a:link {
+    color: black;
+}
+
+a:hover {
+    color: gray;
+}
+
+a:visited {
+    color: rgb(38, 38, 38);
+} */
